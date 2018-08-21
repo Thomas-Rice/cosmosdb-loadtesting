@@ -1,7 +1,7 @@
 ﻿namespace loadtesting.Controllers
 {
     using System.Threading.Tasks;
-    using loadtesting.Services;
+    using Services;
     using Microsoft.AspNetCore.Mvc;
 
     public class LoadController : Controller
@@ -11,21 +11,21 @@
 
         public LoadController(IDocumentDbService documentDbService, ITestDocumentService testDocumentService)
         {
-            this._documentDbService = documentDbService;
-            this._testDocumentService = testDocumentService;
+            _documentDbService = documentDbService;
+            _testDocumentService = testDocumentService;
         }
 
         [ActionName("Write")]
         public async Task<ActionResult> CreateAsync()
         {
-            await this._documentDbService.AddItemAsync(this._testDocumentService.GetDocument());
+            await _documentDbService.AddItemAsync(_testDocumentService.GetDocument());
             return Ok();
         }
 
         [ActionName("Read")]
         public async Task<ActionResult> ReadAsync()
         {
-            await this._documentDbService.ReadItemAsync(Constants.IdForReadTesting);
+            await _documentDbService.ReadItemAsync(Constants.IdForReadTesting);
             return Ok();
         }
     }

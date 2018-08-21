@@ -21,7 +21,7 @@
         {
             DocumentDbService documentDbService = new DocumentDbService(Configuration.GetSection("CosmosDb"));
             // Store a test document for read load testing
-            TestDocumentService testDocumentService = new TestDocumentService();
+            var testDocumentService = new TestDocumentService();
             JObject toRead = (JObject)testDocumentService.GetDocument().DeepClone();
             toRead.Add("id", Constants.IdForReadTesting);
             documentDbService.UpsertItemAsync(toRead).Wait();

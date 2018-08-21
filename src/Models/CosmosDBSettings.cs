@@ -11,7 +11,7 @@
             {
                 DatabaseName = configuration.GetSection("DatabaseName").Value;
                 CollectionName = configuration.GetSection("CollectionName").Value;
-                DatabaseUri = new Uri($"https://{configuration.GetSection("Account").Value}.documents.azure.com:443/");
+                DatabaseUri = new Uri(configuration.GetSection("Account").Value);
                 DatabaseKey = configuration.GetSection("Key").Value;
             }
             catch
