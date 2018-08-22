@@ -1,4 +1,7 @@
-﻿namespace loadtesting.Services
+﻿using System.Linq;
+using Microsoft.Azure.Documents.Client;
+
+namespace loadtesting.Services
 {
     using System.Threading.Tasks;
     using Newtonsoft.Json.Linq;
@@ -21,5 +24,9 @@
         /// <param name="id">Id of the document</param>
         /// <returns></returns>
         Task ReadItemAsync(string id);
+
+        IQueryable<dynamic> CreateDocumentQuery(string query);
+
+        DocumentClient ReturnClient();
     }
 }

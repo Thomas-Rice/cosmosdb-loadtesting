@@ -1,8 +1,10 @@
-﻿namespace loadtesting.Services
+﻿using System.Linq;
+
+namespace loadtesting.Services
 {
     using System;
     using System.Threading.Tasks;
-    using loadtesting.Models;
+    using Models;
     using Microsoft.Azure.Documents.Client;
     using Microsoft.Extensions.Configuration;
     using Newtonsoft.Json.Linq;
@@ -14,7 +16,7 @@
     {
         private readonly CosmosDbSettings _settings;
         private readonly Uri _collectionUri;
-        private DocumentClient _dbClient;
+        private readonly DocumentClient _dbClient;
 
         /// <summary>
         /// Initializes a <see cref="DocumentClient"/> with certain <see cref="ConnectionPolicy"/> settings for load testing
@@ -35,7 +37,12 @@
                 }
             });
         }
-        
+
+
+        public DocumentClient ReturnClient()
+        {
+            return _dbClient;
+        }
         /// <summary>
         /// Adds a document to the collection
         /// </summary>
@@ -64,6 +71,11 @@
         public async Task UpsertItemAsync(JObject item)
         {
             await _dbClient.UpsertDocumentAsync(_collectionUri, item);
+        }
+
+        public IQueryable<dynamic> CreateDocumentQuery(string query)
+        {
+            return _dbClient.CreateDocumentQuery<dynamic>(query);
         }
 
         private Uri GetCollectionLink()
