@@ -1,0 +1,9 @@
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\bin\Debug\WebAndLoadTestProject1.dll
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\bin\Debug\WebAndLoadTestProject1.pdb
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.WebTestFramework.dll
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.csprojAssemblyReference.cache
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.csproj.CoreCompileInputs.cache
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.csproj.CopyComplete
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.dll
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\obj\Debug\WebAndLoadTestProject1.pdb
+C:\Git\Cosmos-Perf-Test-Project\CosmosPerfTest\WebAndLoadTestProject1\bin\Debug\LoadTest1.loadtest
